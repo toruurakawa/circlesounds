@@ -1051,6 +1051,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 8U9GKHD98S;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "formatno2-ios" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1171,6 +1176,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ofxiOS_Prefix.pch;
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
@@ -1178,6 +1185,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = formatno2ios;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Debug;
@@ -1185,6 +1193,8 @@
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ofxiOS_Prefix.pch;
 				"GCC_WARN_64_TO_32_BIT_CONVERSION[arch=*64]" = NO;
@@ -1192,6 +1202,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = formatno2ios;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "$(ARCHS_STANDARD)";
 			};
 			name = Release;
@@ -1202,9 +1213,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nao Tokui (YR77JTZG7W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Nao Tokui (YR77JTZG7W)";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "iPhone Developer: Nao Tokui (YR77JTZG7W)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1290,6 +1301,7 @@
 					../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_video.a,
 					../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_videostab.a,
 				);
+				PROVISIONING_PROFILE = "c5500bd6-4cad-4211-90fc-983d9edf08cb";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1304,9 +1316,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphonesimulator*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1391,6 +1403,7 @@
 					../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_video.a,
 					../../../addons/ofxOpenCv/libs/opencv/lib/ios/opencv_videostab.a,
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "$(ARCHS_STANDARD)";

@@ -45,13 +45,25 @@ void ofApp::update(){
     //ofSoundUpdate();
     
     
-    for (int i=0; i<players.size(); i++){
-        cout << "playing player #: " << i << endl;
-        players[i]->play();
-        
-    }
-    players.clear();
+//    for (int i=0; i<players.size(); i++){
+//        cout << "playing player #: " << i << endl;
+//        players[i]->play();
+//        
+//    }
+//    players.clear();
     
+    for ( vector<ofSoundPlayer *>::iterator it = players.begin(); it != players.end(); ++it )
+    {
+        ofSoundPlayer *p = *it;
+        float pos = p->getPosition();
+        if (pos == 0) {
+            p->play();
+        }
+        else if (pos > 0.9) {
+            delete *it;            
+            it = players.erase(it);
+        }
+    }
     
     
     grabber.update();
