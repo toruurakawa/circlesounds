@@ -59,12 +59,22 @@ void ofApp::update(){
         if (pos == 0) {
             p->play();
         }
-        else if (pos > 0.9) {
-            delete *it;            
-            it = players.erase(it);
-        }
     }
     
+
+    for ( vector<ofSoundPlayer *>::iterator it = players.begin(); it != players.end(); )
+    {
+        ofSoundPlayer *p = *it;
+        if (p) {
+            float pos = p->getPosition();
+            if (pos > 0.9) {
+                delete *it;
+                it = players.erase(it);
+            } else {
+                it++;
+            }
+        }
+    }
     
     grabber.update();
     if (grabber.isFrameNew()){
